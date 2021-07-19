@@ -17,7 +17,7 @@ const quickSort = (arr, l, r, k) => {
 	while (i < j) {
 		while (i < j && arr[j] >= arr[l]) j-- // XXX 这里要加等于号，否则会死循环，可以一个等一个不等。
 		while (i < j && arr[i] <= arr[l]) i++
-		;[arr[i], arr[j]] = [arr[j], arr[i]] // XXX 普通数组可以用解构运算符
+		[arr[i], arr[j]] = [arr[j], arr[i]] // XXX 普通数组可以用解构运算符
 	}
 	;[arr[l], arr[i]] = [arr[i], arr[l]]
 	if (k < i) return quickSort(arr, l, i - 1, k)

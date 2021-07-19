@@ -17,7 +17,7 @@ var exchange = function (nums) {
 			j--
 			continue
 		}
-		;[nums[i], nums[j]] = [nums[j], nums[i]] // XXX 除了中间变量外，第二种变量交换方法——解构运算符。
+		[nums[i], nums[j]] = [nums[j], nums[i]] // XXX 除了中间变量外，第二种变量交换方法——解构运算符。
 	}
 	return nums
 }
