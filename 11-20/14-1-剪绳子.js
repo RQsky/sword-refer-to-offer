@@ -10,18 +10,6 @@
  * - 证明1：几乎每段切一样长，乘积最大
  * - 证明2：几乎每段切长度为3，乘积最大。
  */
-// math
-var cuttingRope = function (n) {
-	if (n <= 3) return n - 1
-	let res = 1
-	while (n >= 3) {
-		res *= 3
-		n -= 3
-	}
-	if (n == 2) return res * 2
-	if (n == 1) return (res * 4) / 3
-	return res
-}
 // dp
 var cuttingRope = function (n) {
 	let dp = []
@@ -34,4 +22,16 @@ var cuttingRope = function (n) {
 		dp[i] = temp
 	}
 	return dp[n]
+}
+// math
+var cuttingRope = function (n) {
+	if (n <= 3) return n - 1
+	let res = 1
+	while (n >= 3) {
+		res *= 3
+		n -= 3
+	}
+	if (n == 2) return res * 2
+	if (n == 1) return (res * 4) / 3
+	return res
 }
